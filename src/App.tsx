@@ -1,10 +1,14 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Catalogue from "./pages/Catalogue";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <>
-      <Catalogue />
+      <nav>
+        <Nav />
+      </nav>
+      <Outlet />
     </>
   );
 }

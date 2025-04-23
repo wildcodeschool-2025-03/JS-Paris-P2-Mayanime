@@ -1,14 +1,10 @@
 import AnimeCards from "../components/AnimeCards";
 import FilterBar from "../components/FilterBar";
-import Nav from "../components/Nav";
 import "./Catalogue.css";
 
 function Catalogue() {
   return (
     <>
-      <nav>
-        <Nav />
-      </nav>
       <body>
         <div className="searchBar">
           <input type="text" placeholder="Search..." />

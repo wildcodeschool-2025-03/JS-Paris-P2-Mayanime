@@ -1,5 +1,6 @@
-import avatar from "../assets/images/avatar.png";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logoResize.png";
+
 function Nav() {
   return (
     <>
@@ -7,18 +8,18 @@ function Nav() {
         <img src={logo} alt="logo" />
       </div>
       <div className="navigation">
-        <a href="/">
-          <button type="button">Catalogue</button>
-        </a>
-        <a href="/">
-          <button type="button">Nouveautés</button>
-        </a>
-        <a href="/">
-          <button type="button">Watchlist</button>
-        </a>
-        <a href="/">
-          <img src={avatar} alt="avatar" />
-        </a>
+        <button type="button">
+          <Link to="/">Nouveauté</Link>
+        </button>
+        <button type="button">
+          <Link to="/Watchlist">Watchlist</Link>
+        </button>
+        <button type="button">
+          <Link to="/Catalogue">Catalogue</Link>
+        </button>
+        <button type="button">
+          <Link to="/Profile">Profile</Link>
+        </button>
       </div>
     </>
   );
