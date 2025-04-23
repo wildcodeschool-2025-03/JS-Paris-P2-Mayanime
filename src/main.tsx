@@ -1,6 +1,12 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { StrictMode } from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./pages/Router.tsx";
 
-createRoot(document.getElementById('root') || document.body)
-.render(<App />);
+// biome-ignore lint/style/noNonNullAssertion: <explanation>
+createRoot(document.getElementById("root")!).render(
+	<StrictMode>
+		<RouterProvider router={router} />
+	</StrictMode>,
+);
