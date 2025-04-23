@@ -1,13 +1,12 @@
 import "./App.css";
+import Catalogue from "./pages/Catalogue";
 
 function App() {
-	const name = "toto";
-	const text = "Welcome";
-	return (
-		<>
-			{text} {name}
-		</>
-	);
+  return (
+    <>
+      <Catalogue />
+    </>
+  );
 }
 
 export default App;

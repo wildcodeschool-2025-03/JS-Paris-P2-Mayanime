@@ -8,7 +8,9 @@
 		"build": "tsc -b && vite build",
 		"check": "biome check --error-on-warnings --no-errors-on-unmatched --staged . && npm run check-types --if-present",
 		"preview": "vite preview",
-		"prepare": "husky || true"
+		"prepare": "husky || true",
+		"format": "biome format . --write",
+		"lint": "biome lint ."
 	},
 	"dependencies": {
 		"beercontest": "file:",
@@ -26,6 +28,7 @@
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
 		"@vitejs/plugin-react-swc": "^3.5.0",
+		"biome": "^0.2.2",
 		"eslint": "^9.13.0",
 		"eslint-plugin-react-hooks": "^5.0.0",
 		"eslint-plugin-react-refresh": "^0.4.14",
