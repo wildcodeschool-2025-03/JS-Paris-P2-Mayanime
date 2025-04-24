@@ -49,9 +49,9 @@ nav {
 	justify-content: left;
 	border: none;
 	position: relative;
-	width: 250px;
+	width: 17rem;
 	margin-top: 25px;
-		margin-left: 25px;
+	margin-left: 25px;
 
 }
 .searchBar input {
@@ -118,8 +118,8 @@ nav {
 		top: 50px;       
 	background-color: #d9d9d9;
 	border-radius: 20px;
-	width: 250px;
-	height: 60vh;
+	width: 17rem;
+	height: 70vh;
 	padding-top: 10px;
 }
 .sideBar input {
