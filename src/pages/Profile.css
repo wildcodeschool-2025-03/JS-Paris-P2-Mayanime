@@ -47,7 +47,7 @@ article {
 
 /* -------- INFORMATIONS DU COMPTE ----------- */
 
-input {
+.checkbox input {
   background-color: #D9D9D9;
  border-radius: 20px;
  border: none;
@@ -55,11 +55,6 @@ input {
  width: 23rem;
 }
 
-label {
- display: flex;
- justify-content: left;
- align-items: center;
-}
 
 .titre {
   display: flex;
@@ -99,5 +94,9 @@ label {
 
 .checkbox label {
    color:  #6030A2;
+   display: flex;
+ justify-content: left;
+ align-items: center;
+
 }
 
