@@ -5,8 +5,8 @@ import "./Profile.css";
 function Profile() {
   return (
     <>
-      <section>
-        <aside>
+      <section className="section">
+        <aside className="aside">
           <div className="edit">
             <img src={avatarProfile} alt="imageProfile" />
             <img src={edit} alt="bouttonEdit" />

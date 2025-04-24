@@ -2,14 +2,14 @@
   color: white;
 }
 
-section {
+.section {
   display: flex;
   justify-content: space-between;
   gap: 10px;
 
 }
 
-aside {
+.aside {
   background-color: black;
 	border-radius: 20px;
   display: flex;
