@@ -1,13 +1,16 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import "./Watchlist"
-import Watchlist from "./Watchlist";
+import Nav from "./components/Nav";
 
 function App() {
-	return (
-		<>
-		<Watchlist/>
-		</>
-	);
+  return (
+    <>
+      <nav>
+        <Nav />
+      </nav>
+      <Outlet />
+    </>
+  );
 }
 
 export default App;

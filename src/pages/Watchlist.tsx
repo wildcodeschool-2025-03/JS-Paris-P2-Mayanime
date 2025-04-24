@@ -1,6 +1,6 @@
 import "./Watchlist.css";
-import dbz from "./DBZ.jpg"
-import saintseiya from "./Saint Seiya.png"
+import dbz from "../assets/DBZ.jpg"
+import saintseiya from "../assets/Saint Seiya.png"
 function Watchlist() {
 	return (
 		<>
