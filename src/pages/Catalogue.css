@@ -7,7 +7,7 @@ nav {
 	justify-content: space-between;
 }
 .logo {
-		margin-left: 25px;
+	margin-left: 25px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -49,10 +49,9 @@ nav {
 	justify-content: left;
 	border: none;
 	position: relative;
-	width: 17rem;
+	width: 250px;
 	margin-top: 25px;
 	margin-left: 25px;
-
 }
 .searchBar input {
 	width: 100%;
@@ -114,12 +113,12 @@ nav {
 	justify-content: left;
 }
 .sideBar aside {
-	  position: sticky;
-		top: 50px;       
+	position: sticky;
+	top: 50px;
 	background-color: #d9d9d9;
 	border-radius: 20px;
-	width: 17rem;
-	height: 70vh;
+	width: 250px;
+	height: 60vh;
 	padding-top: 10px;
 }
 .sideBar input {
@@ -132,6 +131,5 @@ nav {
 .sideBar h4 {
 	display: flex;
 	justify-content: flex-start;
-		margin-left: 20px;
-
+	margin-left: 20px;
 }

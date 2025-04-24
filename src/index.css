@@ -6,6 +6,7 @@
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background: #c31432;
+	/* biome-ignore lint/correctness/noInvalidDirectionInLinearGradient: <explanation> */
 	background: -webkit-linear-gradient(to top, #240b36, #c31432);
 	background: linear-gradient(to top, #240b36, #c31432);
 
