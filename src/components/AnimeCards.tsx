@@ -30,7 +30,7 @@ function AnimeCards() {
 						<img src={anime.images.jpg.image_url} alt="" />
 					</a>
 					<p>{anime.title}</p>
-					<p>⭐{anime.score}</p>
+					<p>{anime.score}⭐</p>
 					<p>🎞️{anime.episodes}</p>
 				</article>
 			))}
