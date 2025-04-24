@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logoResize.png";
-
 function Nav() {
   return (
     <>
@@ -9,7 +8,7 @@ function Nav() {
       </div>
       <div className="navigation">
         <button type="button">
-          <Link to="/">Nouveauté</Link>
+          <Link to="/">Nouveautés</Link>
         </button>
         <button type="button">
           <Link to="/Watchlist">Watchlist</Link>

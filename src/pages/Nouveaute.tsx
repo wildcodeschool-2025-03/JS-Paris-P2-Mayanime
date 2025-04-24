@@ -1,4 +1,3 @@
-import LogoMayanime from "../images/LogoMayanime.png";
 import "./Nouveaute.css";
 
 function Nouveaute() {
