@@ -1,5 +1,5 @@
 * {
-  color: white;
+	color: white;
 }
 
 .section {
@@ -12,37 +12,36 @@
 .aside {
   background-color: black;
 	border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
-  width: 20vw;
-  height: 90vh;
-  margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: center;
+	width: 20vw;
+	height: 90vh;
+	margin-top: 50px;
 }
 
 .edit {
-padding-top: 30px;
+	padding-top: 30px;
 }
 
 .description {
-  margin-top: 60px;
+	margin-top: 60px;
 }
 
 .description h1 {
-  font-size: 2em;
+	font-size: 2em;
 }
 
 .descriptionParagraphe {
-  width: 80%;
+	width: 80%;
 }
 
 .box {
   background-color: black;
     width: 70vw;
 	border-radius: 20px;
-    margin-top: 50px;
-
+	margin-top: 50px;
 }
 
 /* -------- INFORMATIONS DU COMPTE ----------- */
@@ -57,39 +56,39 @@ padding-top: 30px;
 
 
 .titre {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 2em;
-  margin-left: 50px;
-  margin-top: 80px;
+	display: flex;
+	justify-content: flex-start;
+	font-size: 2em;
+	margin-left: 50px;
+	margin-top: 80px;
 }
 
 .formulaire {
-  display: flex;
- justify-content: space-evenly;
- margin-top: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 20px;
 }
 
 .formulaire p b {
-  display: flex;
-   justify-content: left;
-   color:  #6030A2;
+	display: flex;
+	justify-content: left;
+	color: #6030a2;
 }
 
 .mail {
-  display: flex;
-  flex-direction: column;
-  gap : 10px
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .password {
-   display: flex;
-  flex-direction: column;
-  gap : 10px
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .checkbox {
-  margin-top: 90px;
+	margin-top: 90px;
 }
 
 .checkbox label {
