@@ -1,11 +1,11 @@
 import "./App.css";
+import "./Watchlist"
+import Watchlist from "./Watchlist";
 
 function App() {
-	const name = "toto";
-	const text = "Welcome";
 	return (
 		<>
-			{text} {name}
+		<Watchlist/>
 		</>
 	);
 }
