@@ -37,7 +37,7 @@ padding-top: 30px;
   width: 80%;
 }
 
-article {
+.box {
   background-color: black;
     width: 70vw;
 	border-radius: 20px;

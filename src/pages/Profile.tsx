@@ -24,7 +24,7 @@ function Profile() {
             </p>
           </div>
         </aside>
-        <article>
+        <article className="box">
           <div className="titre">
             <h1>INFORMATIONS DU COMPTE</h1>
           </div>
