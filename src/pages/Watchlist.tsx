@@ -17,8 +17,8 @@ function Watchlist() {
 						<p>Doublage-Sous titres</p>
 					</div>
 					<div>
-						<button type="button">Vu</button>
-						<button type="button">Supprimer</button>
+						<button>Vu</button>
+						<button>Supprimer</button>
 					</div>
 				</div>
 			</section>
@@ -31,8 +31,8 @@ function Watchlist() {
 						<p>Doublage-Sous titres</p>
 					</div>
 					<div className="bouton2">
-						<button type="button">Vu</button>
-						<button type="button">Supprimer</button>
+						<button>Vu</button>
+						<button>Supprimer</button>
 					</div>
 				</div>
 			</section>
