@@ -13,7 +13,7 @@ function Watchlist() {
 				<div className="image1">
 					<img src={saintseiya} alt="" />
 					<div>
-						<p>SAINT SEIYA/LES CHEVALIERS DU ZODIAQUE</p>
+						<p>SAINT SEIYA / LES CHEVALIERS DU ZODIAQUE</p>
 						<p>Doublage-Sous titres</p>
 					</div>
 					<div className="bouton2">
