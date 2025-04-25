@@ -5,18 +5,18 @@ function Watchlist() {
 	return (
 		<>
     <div className="bouton">
-        <button>Watchlist</button>
+        <button><b>Watchlist</b></button>
         <button>Vus</button>
 </div>
 
-<section>
+<section className="seiya">
   <div className="image1">
  <img src={saintseiya} alt="" />
  <div>
 <p>SAINT SEIYA/LES CHEVALIERS DU ZODIAQUE</p>
     <p>Doublage-Sous titres</p>
  </div>
- <div>
+ <div className="bouton2">
   <button>Vu</button>
   <button>Supprimer</button>
  </div>
@@ -25,7 +25,7 @@ function Watchlist() {
 </section>
 
 
-<section>
+<section className="goku">
   <div className="image1">
  <img src={dbz} alt="" />
  <div>
