@@ -5,6 +5,9 @@
     font-weight: bold;
     background-color: #733597;
   color: white;
+  border: none;
+  border-radius: 25px;
+  font-size:    1em;
 }
 
 .bouton {
