@@ -9,21 +9,21 @@ function Watchlist() {
 				<button type="button">Vus</button>
 			</div>
 
-			<section>
+			<section className="seiya">
 				<div className="image1">
 					<img src={saintseiya} alt="" />
 					<div>
 						<p>SAINT SEIYA/LES CHEVALIERS DU ZODIAQUE</p>
 						<p>Doublage-Sous titres</p>
 					</div>
-					<div>
-						<button>Vu</button>
-						<button>Supprimer</button>
+					<div className="bouton2">
+						<button type="button">Vu</button>
+						<button type="button">Supprimer</button>
 					</div>
 				</div>
 			</section>
 
-			<section>
+			<section className="goku">
 				<div className="image1">
 					<img src={dbz} alt="" />
 					<div>
