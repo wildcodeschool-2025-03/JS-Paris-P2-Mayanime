@@ -7,8 +7,8 @@ interface Anime {
 	score: number;
 	episodes: number;
 	images: {
-		jpg: {
-			image_url: string;
+		webp: {
+			large_image_url: string;
 		};
 	};
 	synopsis: string;
@@ -46,9 +46,12 @@ function Cover() {
 	const currentAnime = data[currentIndex]; // ➔ L'animé affiché
 
 	return (
-		<article key={currentAnime.mal_id}>
+		<article className="Cover" key={currentAnime.mal_id}>
 			<a href="/">
-				<img src={currentAnime.images.jpg.image_url} alt={currentAnime.title} />
+				<img
+					src={currentAnime.images.webp.large_image_url}
+					alt={currentAnime.title}
+				/>
 			</a>
 			<h2>{currentAnime.title}</h2>
 			<p>{currentAnime.score} ⭐</p>
@@ -56,8 +59,8 @@ function Cover() {
 			<h3>Synopsis</h3>
 			<p>
 				{currentAnime.synopsis.length > 300
-					// biome-ignore lint/style/useTemplate: <explanation>
-					? currentAnime.synopsis.substring(0, 300) + "..."
+					? // biome-ignore lint/style/useTemplate: <explanation>
+						currentAnime.synopsis.substring(0, 300) + "..."
 					: currentAnime.synopsis}
 			</p>
 			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
