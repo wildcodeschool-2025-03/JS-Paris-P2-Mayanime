@@ -7,7 +7,7 @@ nav {
 	justify-content: space-between;
 }
 .logo {
-		margin-left: 25px;
+	margin-left: 25px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -51,8 +51,7 @@ nav {
 	position: relative;
 	width: 250px;
 	margin-top: 25px;
-		margin-left: 25px;
-
+	margin-left: 25px;
 }
 .searchBar input {
 	width: 100%;
@@ -89,13 +88,13 @@ nav {
 }
 .animeCards article {
 	width: 21%;
-	background-color: #d9d9d9;
+	background-color: #000000;
 	border-radius: 20px;
 	transition: background 1s ease;
 	transform-origin: center;
 }
 .animeCards article:hover {
-	background: #d9d9d9;
+	background: #6c3483;
 	transform: scale(1.1);
 	box-shadow: 0 0 30px #ecd9f3;
 }
@@ -114,9 +113,9 @@ nav {
 	justify-content: left;
 }
 .sideBar aside {
-	  position: sticky;
-		top: 50px;       
-	background-color: #d9d9d9;
+	position: sticky;
+	top: 50px;
+	background-color: #000000;
 	border-radius: 20px;
 	width: 250px;
 	height: 60vh;
@@ -124,6 +123,7 @@ nav {
 }
 .sideBar input {
 	display: flex;
+	justify-content: left;
 	flex-direction: column;
 	margin-left: 20px;
 }
@@ -132,6 +132,5 @@ nav {
 .sideBar h4 {
 	display: flex;
 	justify-content: flex-start;
-		margin-left: 20px;
-
+	margin-left: 20px;
 }

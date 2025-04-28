@@ -1,5 +1,6 @@
 import AnimeCards from "../components/AnimeCards";
 import FilterBar from "../components/FilterBar";
+import SearchBar from "../components/SearchBar";
 import "./Catalogue.css";
 
 function Catalogue() {
@@ -7,8 +8,7 @@ function Catalogue() {
     <>
       <body>
         <div className="searchBar">
-          <input type="text" placeholder="Search..." />
-          <button type="button">🔍︎</button>
+          <SearchBar />
         </div>
         <main className="catalogue">
           <div className="sideBar">
