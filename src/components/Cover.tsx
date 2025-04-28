@@ -8,7 +8,7 @@ interface Anime {
 	score: number;                         
 	episodes: number;                      
 	images: {
-		jpg: {
+		webp: {
 			large_image_url: string;              
 		};
 	};
@@ -62,7 +62,7 @@ function Cover() {
 	return (
 		<article className="Cover" key={currentAnime.mal_id}>
 			<a href="/">
-				<img src={currentAnime.images.jpg.image_url} alt={currentAnime.title} />
+				<img src={currentAnime.images.jpg.large_image_url} alt={currentAnime.title} />
 			</a>
 			<h2>{currentAnime.title}</h2>
 			<p>{currentAnime.score} ⭐</p>
