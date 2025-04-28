@@ -7,7 +7,7 @@ function Nouveaute() {
 		<>
 			<main className="main-content">
 				<section className="text-section">
-					<Cover/>
+					<Cover />
 				</section>
 			</main>
 		</>
