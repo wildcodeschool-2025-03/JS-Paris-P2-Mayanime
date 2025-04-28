@@ -1,14 +1,17 @@
+import { useState } from "react";
 import AnimeCards from "../components/AnimeCards";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 import "./Catalogue.css";
 
 function Catalogue() {
+  const [search, setSearch] = useState("");
+
   return (
     <>
       <body>
         <div className="searchBar">
-          <SearchBar />
+          <SearchBar search={search} setSearch={setSearch} />
         </div>
         <main className="catalogue">
           <div className="sideBar">
@@ -17,7 +20,7 @@ function Catalogue() {
             </aside>
           </div>
           <section className="animeCards">
-            <AnimeCards />
+            <AnimeCards search={search} />
           </section>
         </main>
       </body>
