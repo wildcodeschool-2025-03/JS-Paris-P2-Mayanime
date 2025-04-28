@@ -1,57 +1,62 @@
-.main-content {
+.Cover {
+	position: relative;
+	width: 100%;
+	height: 90vh; /* Occupe presque tout l'écran */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: start;
+	padding: 50px;
+	color: white;
 }
 
-.text-section {
-	color: white !important;
-	max-width: 50%;
-	padding: 0 20px;
+.Cover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0) 100%);
+	z-index: 1;
 }
 
-.text-section h2 {
-	font-size: 2.8em;
+.Cover .text-section {
+	position: relative;
+	z-index: 2;
+	max-width: 600px;
+}
+
+.Cover .text-section h2 {
+	font-size: 3rem;
 	margin-bottom: 20px;
-	text-align: left;
 }
 
-.text-section h3 {
-	font-size: 2em;
+.Cover .text-section h3 {
+	font-size: 2rem;
 	margin-bottom: 10px;
-	font-weight: bold;
-	color: white !important;
 }
 
-.text-section p {
-	font-size: 1.1em;
+.Cover .text-section p {
+	font-size: 1.2rem;
+	margin-bottom: 20px;
 	line-height: 1.6;
-	color: #ddd;
-	margin-bottom: 30px;
+	color: #eee;
 }
 
-.text-section button {
+.Cover .text-section button {
 	background-color: #6c3483;
 	color: white;
 	border: none;
 	padding: 12px 24px;
-	font-size: 1em;
+	font-size: 1rem;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
-.text-section button:hover {
+.Cover .text-section button:hover {
 	background-color: #4b35a5;
-}
-
-.image-section {
-	flex: 1;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-}
-
-.image-section img {
-	max-width: 130%;
-	height: auto;
 }
