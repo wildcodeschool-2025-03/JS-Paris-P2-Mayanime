@@ -2,8 +2,25 @@
 	display: flex;
 	justify-content: flex-start;
 	gap: 70px;
-	font-weight: bold;
+	font-weight: bolder;
 }
+
+.bouton button {
+ align-items: center;
+	margin-top: 20px;
+	margin-right: 30px;
+	background-color: #733597;
+	color: white; 
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5em;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+
+    
+}
+
+
 
 .image1 {
 	display: flex;
@@ -23,18 +40,24 @@
 	width: 100%;
 }
 
-section {
+.seiya {
 	width: 100vw;
 }
 
-div button {
-	align-items: center;
-	margin-top: 20px;
-	margin-right: 30px;
-	background-color: #733597;
-	color: white;
-}
+.goku {
+  width: 100vw;
+}  
+
+
 
 .image1 div {
 	width: 40%;
+}
+
+.bouton2 button {
+  align-items: center;
+	margin-top: 20px;
+	margin-right: 30px;
+	background-color: #733597;
+	color: white;  
 }

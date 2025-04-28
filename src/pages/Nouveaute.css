@@ -1,11 +1,5 @@
-body {
-	font-family: "Arial", sans-serif;
-	background: linear-gradient(to bottom, #a61c3c, #360533);
-	color: white;
-	min-height: 100vh;
-	padding-bottom: 60px;
-}
-main {
+
+.main-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
