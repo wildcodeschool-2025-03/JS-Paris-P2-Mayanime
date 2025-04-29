@@ -8,7 +8,7 @@ function App() {
 			<nav>
 				<Nav />
 			</nav>
-			<Outlet />
+				<Outlet />
 		</>
 	);
 }

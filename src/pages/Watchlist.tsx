@@ -30,9 +30,6 @@ function Watchlist() {
 				<button type="button">Watchlist</button>
 				<button type="button">Vus</button>
 			</div>
-
-
-			
 		</>
 	);
 }

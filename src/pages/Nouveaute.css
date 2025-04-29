@@ -1,58 +1,8 @@
-
-.main-content {
+.Cover {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: row;
+}
+.Cover div {
+	text-align: start;
 }
 
-.text-section {
-	color: white !important;
-	max-width: 50%;
-	padding: 0 20px;
-}
-
-.text-section h2 {
-	font-size: 2.8em;
-	margin-bottom: 20px;
-	text-align: left;
-}
-
-.text-section h3 {
-	font-size: 2em;
-	margin-bottom: 10px;
-	font-weight: bold;
-	color: white !important;
-}
-
-.text-section p {
-	font-size: 1.1em;
-	line-height: 1.6;
-	color: #ddd;
-	margin-bottom: 30px;
-}
-
-.text-section button {
-	background-color: #6c3483;
-	color: white;
-	border: none;
-	padding: 12px 24px;
-	font-size: 1em;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.text-section button:hover {
-	background-color: #4b35a5;
-}
-
-.image-section {
-	flex: 1;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-}
-
-.image-section img {
-	max-width: 130%;
-	height: auto;
-}
