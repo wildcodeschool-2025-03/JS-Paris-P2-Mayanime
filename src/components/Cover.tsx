@@ -61,23 +61,26 @@ function Cover() {
 	// Rendu : on affiche les détails de l'anime courant
 	return (
 		<article className="Cover" key={currentAnime.mal_id}>
+			<div>
+				<h2>{currentAnime.title}</h2>
+				<p>{currentAnime.score} ⭐</p>
+				<p>🎞️ {currentAnime.episodes} épisodes</p>
+				<h3>Synopsis</h3>
+				<p>
+					{currentAnime.synopsis.length > 300
+						// Si le synopsis fait plus de 300 caractères, on le coupe et on ajoute '...'
+						// biome-ignore lint/style/useTemplate: <explanation>
+											? currentAnime.synopsis.substring(0, 300) + "..."
+						// Sinon on l'affiche en entier
+						: currentAnime.synopsis}
+				</p>
+				{/* Bouton sans type pour l'instant, on pourra ajouter une action plus tard */}
+				<button type="button">En savoir plus</button>
+			</div>
 			<a href="/">
 				<img src={currentAnime.images.jpg.large_image_url} alt={currentAnime.title} />
 			</a>
-			<h2>{currentAnime.title}</h2>
-			<p>{currentAnime.score} ⭐</p>
-			<p>🎞️ {currentAnime.episodes} épisodes</p>
-			<h3>Synopsis</h3>
-			<p>
-				{currentAnime.synopsis.length > 300
-					// Si le synopsis fait plus de 300 caractères, on le coupe et on ajoute '...'
-					// biome-ignore lint/style/useTemplate: <explanation>
-										? currentAnime.synopsis.substring(0, 300) + "..."
-					// Sinon on l'affiche en entier
-					: currentAnime.synopsis}
-			</p>
-			{/* Bouton sans type pour l'instant, on pourra ajouter une action plus tard */}
-			<button type="button">En savoir plus</button>
+			
 		</article>
 	);
 }
