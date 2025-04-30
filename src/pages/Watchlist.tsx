@@ -2,6 +2,7 @@ import "./Watchlist.css";
 import dbz from "../assets/DBZ.jpg";
 import saintseiya from "../assets/Saint Seiya.png";
 import { useEffect, useState } from "react";
+
 function WatchAnime({ anime }) {
 	const [insideWatchlist, setInsideWatchlist] = useState(
 		localStorage.getItem(`${anime.mal_id}-vu`) === "true",
