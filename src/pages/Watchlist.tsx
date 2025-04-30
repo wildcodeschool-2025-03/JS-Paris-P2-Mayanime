@@ -13,7 +13,7 @@ function WatchAnime({ anime }) {
 				<div>
 					<p>{anime.title_japanese}</p>
 					<p>{anime.title_english}</p>
-					<p>Doublage-Sous titres</p>
+					<h1>Doublage - Sous titres</h1>
 				</div>
 				<div className="bouton2">
 					{!insideWatchlist ? (
