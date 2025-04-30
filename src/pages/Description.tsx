@@ -1,45 +1,46 @@
 import { useState } from "react";
 import "./Description.css";
-import pieceImage from "../assets/img/Piece.jpg";
-import mayanimeLogo from "../assets/img/mayanime.png";
-import onePieceLogo from "../assets/img/onepiece.png";
-// import video from "../assets/img/video.mp4";
 
-function Description() {
+interface DescriptionProps {
+	anime: {
+		mal_id: number;
+		title: string;
+		score: number;
+		episodes: number;
+		year: number;
+		trailer: {
+			embed_url: string;
+		};
+		images: {
+			webp: {
+				large_image_url: string;
+			};
+		};
+		synopsis: string;
+		type: string;
+		name: string;
+	};
+}
+
+function Description({ anime }: DescriptionProps) {
 	const [showTrailer, setShowTrailer] = useState(false);
 
 	return (
 		<>
 			<section className="all">
-				<div className="close-button">✕</div>
+				<div> className="close-button"✕</div>
 
 				<section className="hero">
-					<img src={pieceImage} alt="One Piece" className="hero-img" />
+					<img src={anime.images.webp.large_image_url} alt={anime.title} />
 					<div className="hero-gradient" />
-					<img
-						src={mayanimeLogo}
-						alt="mayanime logo"
-						className="mayanime-logo"
-					/>
-					<img
-						src={onePieceLogo}
-						alt="One Piece Logo"
-						className="onepiece-logo"
-					/>
-					<p>
-						<strong>Plongez dans une aventure extraordinaire!</strong>
-					</p>
 				</section>
 
 				<section className="description-block">
 					<div className="description-top">
-						<button
-							className="btn-trailer"
-							onClick={() => setShowTrailer(true)}
-							type="button"
-						>
-							▶ Bande-annonce
-						</button>
+						<details>
+							<summary>▶ Bande-annonce</summary>
+							{anime.trailer.embed_url}
+						</details>
 
 						<div className="rating-box">
 							<span>★★★★☆</span>
@@ -52,26 +53,19 @@ function Description() {
 
 					<div className="rating-info">
 						<span className="rating-text">
-							Noté <strong>4.8 ★</strong> par nos utilisateurs
+							Noté <strong>{anime.score}</strong> par nos utilisateurs
 						</span>
 						<span className="separator">|</span>
-						<span>2003</span>
+						<span>{anime.year}</span>
 						<span className="separator">|</span>
 						<span>13+</span>
 						<span className="separator">|</span>
-						<span>22 saisons</span>
+						<span>{anime.episodes}</span>
 					</div>
 
 					<div className="description-content">
 						<div className="left">
-							<p>
-								<strong>"One Piece"</strong> suit les aventures de Monkey D.
-								Luffy, un jeune pirate, dont le corps a acquis les propriétés du
-								caoutchouc après avoir mangé un Fruit du Démon. Avec son
-								équipage, les Mugiwara (Chapeaux de Paille), il parcourt la mer
-								à la recherche du trésor légendaire, le One Piece, afin de
-								devenir le Roi des Pirates.
-							</p>
+							<p>{anime.synopsis}</p>
 						</div>
 						<div className="right">
 							<p>
@@ -93,24 +87,28 @@ function Description() {
 						💬 Avis <span className="badge">27</span>
 					</button>
 				</section>
-			</section>
 
-			{showTrailer && (
-				<div className="video-modal">
-					<button
-						className="close-button"
-						onClick={() => setShowTrailer(false)}
-						type="button"
-					>
-						✕
-					</button>
-					{/* biome-ignore lint/a11y/useMediaCaption: no subtitle translation */}
-					<video controls autoPlay className="trailer-video">
-						{/* <source src={video} type="video/mp4" /> */}
-						Votre navigateur ne supporte pas la vidéo.
-					</video>
-				</div>
-			)}
+				{showTrailer && (
+					<div className="video-modal">
+						<button
+							className="close-button"
+							onClick={() => setShowTrailer(false)}
+							type="button"
+						>
+							✕
+						</button>
+
+						<iframe
+							src={anime.trailer.embed_url}
+							title={`Trailer de ${anime.title}`}
+							className="trailer-video"
+							width="100%"
+							height="400"
+							allowFullScreen
+						/>
+					</div>
+				)}
+			</section>
 		</>
 	);
 }

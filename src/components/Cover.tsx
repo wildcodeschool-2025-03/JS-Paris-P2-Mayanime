@@ -76,12 +76,12 @@ function Cover() {
 				{/* Bouton sans type pour l'instant, on pourra ajouter une action plus tard */}
 				<details>
 					<summary>En savoir plus</summary>
-					<Description />
+					<Description anime={currentAnime} />
 				</details>
 			</div>
 			<a href="/">
 				<img
-					src={currentAnime.images.jpg.large_image_url}
+					src={currentAnime.images.webp.large_image_url}
 					alt={currentAnime.title}
 				/>
 			</a>
