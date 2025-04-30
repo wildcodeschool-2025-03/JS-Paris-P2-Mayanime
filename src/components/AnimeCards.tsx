@@ -2,40 +2,50 @@ import { useEffect, useState } from "react";
 import "../pages/Catalogue.css";
 
 interface Anime {
-	mal_id: number;
-	title: string;
-	score: number;
-	episodes: number;
-	images: {
-		jpg: {
-			image_url: string;
-		};
-	};
+  mal_id: number;
+  title: string;
+  score: number;
+  episodes: number;
+  images: {
+    jpg: {
+      image_url: string;
+    };
+  };
 }
 
-function AnimeCards() {
-	const [data, setData] = useState<Anime[]>([]);
+function AnimeCards({ checked, name }) {
+  // console.log(checked, name);
 
-	useEffect(() => {
-		fetch("https://api.jikan.moe/v4/anime")
-			.then((response) => response.json())
-			.then((data) => setData(data.data));
-	}, []);
+  const [data, setData] = useState<Anime[]>([]);
 
-	return (
-		<>
-			{data.map((anime) => (
-				<article key={anime.mal_id}>
-					<a href="/">
-						<img src={anime.images.jpg.image_url} alt="" />
-					</a>
-					<p>{anime.title}</p>
-					<p>{anime.score}⭐</p>
-					<p>🎞️{anime.episodes}</p>
-				</article>
-			))}
-		</>
-	);
+  useEffect(() => {
+    fetch("https://api.jikan.moe/v4/anime")
+      .then((response) => response.json())
+      .then((data) => setData(data.data));
+  }, []);
+
+  const dataFiltered = data.filter((anime) => {
+    if (checked) {
+      return anime.status === "Currently Airing";
+    } else {
+      return true;
+    }
+  });
+  console.info(dataFiltered);
+  return (
+    <>
+      {dataFiltered.map((anime) => (
+        <article key={anime.mal_id}>
+          <a href="/">
+            <img src={anime.images.jpg.image_url} alt="" />
+          </a>
+          <p>{anime.title}</p>
+          <p>{anime.score}⭐</p>
+          <p>🎞️{anime.episodes}</p>
+        </article>
+      ))}
+    </>
+  );
 }
 
 export default AnimeCards;
