@@ -1,8 +1,166 @@
 .Cover {
 	display: flex;
-	flex-direction: row;
-}
-.Cover div {
-	text-align: start;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3rem 4rem;
+	margin-top: 5rem;
+	border-radius: 1.2rem;
+	min-height: 70vh;
+	background: linear-gradient(135deg, #141414, #1f1c2c);
+	color: white;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+	gap: 2rem;
+	overflow: hidden;
+	animation: fadeSlide 0.6s ease;
 }
 
+@keyframes fadeSlide {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.Cover:hover {
+	box-shadow: 0 0 60px rgba(94, 45, 149, 0.5);
+}
+
+.Cover .content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1rem;
+	max-width: 50%;
+	text-align: left;
+	position: relative;
+	animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.badge {
+	background: linear-gradient(135deg, #e50914, #b1060f);
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 0.4rem 0.9rem;
+	border-radius: 0.6rem;
+	box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: inline-block;
+	position: relative;
+}
+
+.badge::before,
+.badge::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 6px;
+	height: 6px;
+	background-color: white;
+	border-radius: 50%;
+	transform: translateY(-50%);
+}
+
+.badge::before {
+	left: -10px;
+}
+
+.badge::after {
+	right: -10px;
+}
+
+.Cover h2 {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: #fff;
+	line-height: 1.2;
+}
+
+.Cover h3 {
+	font-size: 1.1rem;
+	color: #8e44ad;
+	text-transform: uppercase;
+	margin-top: 0.5rem;
+}
+
+.Cover p {
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: #ccc;
+	margin: 0;
+}
+
+.Cover p:first-of-type {
+	color: #f5c518;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.Cover button {
+	background: linear-gradient(to right, #8e44ad, #5e2d95);
+	color: white;
+	border: none;
+	padding: 0.7rem 1.5rem;
+	border-radius: 999px;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	width: fit-content;
+}
+
+.Cover button:hover {
+	transform: scale(1.08);
+	box-shadow: 0 0 15px rgba(94, 45, 149, 0.6);
+}
+
+.Cover img {
+	width: 320px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 1rem;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+	transition: transform 0.4s ease;
+}
+
+.Cover img:hover {
+	transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+	.Cover {
+		flex-direction: column-reverse;
+		padding: 2rem 1rem;
+		min-height: auto;
+		text-align: center;
+	}
+
+	.Cover .content {
+		align-items: center;
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.Cover img {
+		width: 90%;
+		max-width: 300px;
+	}
+}
