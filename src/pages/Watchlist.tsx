@@ -1,3 +1,4 @@
+import "./Watchlist.css";
 import dbz from "../assets/DBZ.jpg";
 import saintseiya from "../assets/Saint Seiya.png";
 import { useEffect, useState } from "react";
