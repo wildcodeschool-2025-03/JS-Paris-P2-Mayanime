@@ -23,8 +23,10 @@ function AnimeCards({ search }) {
       .then((data) => setData(data.data));
   }, []);
 
-  const result = data.filter((el) => el.title.includes(search));
-  console.info(result);
+  const result = data.filter((el) =>
+    el.title.toLowerCase().includes(search.toLowerCase())
+  );
+  // console.info(result);
   return (
     <>
       {result.map((anime) => (
