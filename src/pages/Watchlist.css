@@ -6,15 +6,15 @@
 }
 
 .bouton button {
-	align-items: center;
-	margin-top: 20px;
+	font-size: 1rem;
+	text-align: center;
+	margin-top: 60px;
 	margin-right: 30px;
 	background-color: #733597;
 	color: white;
 	border: none;
 	border-radius: 20px;
-	font-size: 1.5em;
-	padding: 0.5rem 1rem;
+	padding: 1rem 2rem;
 	font-weight: bold;
 }
 
@@ -49,11 +49,18 @@
 }
 
 .bouton2 button {
-	align-items: center;
 	margin-top: 20px;
 	margin-right: 30px;
 	background-color: #733597;
 	color: white;
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 0.8rem 1.3rem;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	display: inline-block;
+	transform-origin: center;
 }
 
 div p {
