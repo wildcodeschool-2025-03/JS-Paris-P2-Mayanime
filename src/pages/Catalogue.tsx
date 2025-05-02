@@ -3,8 +3,9 @@ import AnimeCards from "../components/AnimeCards";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 import "./Catalogue.css";
-
 function Catalogue() {
+  const [checked, setChecked] = useState(false);
+  const [name, setName] = useState("");
   const [search, setSearch] = useState("");
 
   return (
@@ -16,11 +17,11 @@ function Catalogue() {
         <main className="catalogue">
           <div className="sideBar">
             <aside>
-              <FilterBar />
+              <FilterBar setChecked={setChecked} setName={setName} />
             </aside>
           </div>
           <section className="animeCards">
-            <AnimeCards search={search} />
+            <AnimeCards checked={checked} name={name} search={search} />
           </section>
         </main>
       </body>
