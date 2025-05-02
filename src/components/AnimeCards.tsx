@@ -13,7 +13,7 @@ interface Anime {
   };
 }
 
-function AnimeCards({ checked, name }) {
+function AnimeCards({ checked, search }) {
   // console.log(checked, name);
 
   const [data, setData] = useState<Anime[]>([]);
@@ -27,14 +27,15 @@ function AnimeCards({ checked, name }) {
   const dataFiltered = data.filter((anime) => {
     if (checked) {
       return anime.status === "Currently Airing";
-    } else {
-      return true;
     }
+    return true;
   });
-  console.info(dataFiltered);
+
+  const result = dataFiltered.filter((el) => el.title.includes(search));
+  console.info(result);
   return (
     <>
-      {dataFiltered.map((anime) => (
+      {result.map((anime) => (
         <article key={anime.mal_id}>
           <a href="/">
             <img src={anime.images.jpg.image_url} alt="" />
