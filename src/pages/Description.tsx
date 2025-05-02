@@ -23,12 +23,10 @@ interface DescriptionProps {
 }
 
 function Description({ anime }: DescriptionProps) {
-	const [showTrailer, setShowTrailer] = useState(false);
-
 	return (
 		<>
 			<section className="all">
-				<div> className="close-button"✕</div>
+				<div className="close-button">✕</div>
 
 				<section className="hero">
 					<img src={anime.images.webp.large_image_url} alt={anime.title} />
@@ -37,10 +35,19 @@ function Description({ anime }: DescriptionProps) {
 
 				<section className="description-block">
 					<div className="description-top">
-						<details>
-							<summary>▶ Bande-annonce</summary>
-							{anime.trailer.embed_url}
-						</details>
+						<p>▶ Bande-annonce</p>
+						{anime.trailer.embed_url == null ? (
+							<p>indisponible :/</p>
+						) : (
+							<iframe
+								src={anime.trailer.embed_url}
+								title={`Trailer de ${anime.title}`}
+								className="trailer-video"
+								width="100%"
+								height="400"
+								allowFullScreen
+							/>
+						)}
 
 						<div className="rating-box">
 							<span>★★★★☆</span>
@@ -87,27 +94,6 @@ function Description({ anime }: DescriptionProps) {
 						💬 Avis <span className="badge">27</span>
 					</button>
 				</section>
-
-				{showTrailer && (
-					<div className="video-modal">
-						<button
-							className="close-button"
-							onClick={() => setShowTrailer(false)}
-							type="button"
-						>
-							✕
-						</button>
-
-						<iframe
-							src={anime.trailer.embed_url}
-							title={`Trailer de ${anime.title}`}
-							className="trailer-video"
-							width="100%"
-							height="400"
-							allowFullScreen
-						/>
-					</div>
-				)}
 			</section>
 		</>
 	);
