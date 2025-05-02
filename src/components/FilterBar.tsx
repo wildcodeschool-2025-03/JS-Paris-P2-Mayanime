@@ -12,9 +12,9 @@ function FilterBar({ setChecked, setName }) {
 
   return (
     <>
-      <div className="langues" />
+      {/* <div className="langues" /> */}
       <h4>Status</h4>
-      <div>
+      <div className="status">
         <input type="checkbox" name="Currently Airing" onClick={clickChange} />
         <label htmlFor="Currently Airing">Currently Airing</label>
       </div>
