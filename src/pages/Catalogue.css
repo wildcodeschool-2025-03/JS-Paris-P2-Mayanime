@@ -59,7 +59,7 @@ nav {
 	border-radius: 20px;
 	border: none;
 	background-color: #d9d9d9;
-	color: white;
+	color: black;
 }
 .searchBar button {
 	position: absolute;
@@ -87,7 +87,7 @@ nav {
 	margin-left: 50px;
 }
 .animeCards article {
-	width: 21%;
+	width: 250px;
 	background-color: #000000;
 	border-radius: 20px;
 	transition: background 1s ease;
@@ -118,7 +118,7 @@ nav {
 	background-color: #000000;
 	border-radius: 20px;
 	width: 250px;
-	height: 60vh;
+	height: 500px;
 	padding-top: 10px;
 }
 .sideBar input {
@@ -133,4 +133,9 @@ nav {
 	display: flex;
 	justify-content: flex-start;
 	margin-left: 20px;
+}
+
+.status {
+	display: flex;
+	gap: 20px;
 }
