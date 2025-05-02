@@ -13,9 +13,10 @@ interface Anime {
   };
 }
 
-function AnimeCards({ search }) {
+function AnimeCards({ checked, search }) {
+  // console.log(checked, name);
+
   const [data, setData] = useState<Anime[]>([]);
-  console.info("search:", search);
 
   useEffect(() => {
     fetch("https://api.jikan.moe/v4/anime")
@@ -23,10 +24,17 @@ function AnimeCards({ search }) {
       .then((data) => setData(data.data));
   }, []);
 
+  const dataFiltered = data.filter((anime) => {
+    if (checked) {
+      return anime.status === "Currently Airing";
+    }
+    return true;
+  });
+
   const result = data.filter((el) =>
     el.title.toLowerCase().includes(search.toLowerCase())
   );
-  // console.info(result);
+  //  console.info(result);
   return (
     <>
       {result.map((anime) => (

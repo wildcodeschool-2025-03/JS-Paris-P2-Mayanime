@@ -1,5 +1,5 @@
 import "./Nouveaute.css";
-import Cover from "../components/cover";
+import Cover from "../components/Cover";
 
 function Nouveaute() {
   return (
