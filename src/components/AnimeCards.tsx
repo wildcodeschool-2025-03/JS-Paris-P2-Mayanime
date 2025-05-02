@@ -13,7 +13,9 @@ interface Anime {
   };
 }
 
-function AnimeCards() {
+function AnimeCards({ checked, search }) {
+  // console.log(checked, name);
+
   const [data, setData] = useState<Anime[]>([]);
 
   useEffect(() => {
@@ -22,9 +24,18 @@ function AnimeCards() {
       .then((data) => setData(data.data));
   }, []);
 
+  const dataFiltered = data.filter((anime) => {
+    if (checked) {
+      return anime.status === "Currently Airing";
+    }
+    return true;
+  });
+
+  const result = dataFiltered.filter((el) => el.title.includes(search));
+  console.info(result);
   return (
     <>
-      {data.map((anime) => (
+      {result.map((anime) => (
         <article key={anime.mal_id}>
           <a href="/">
             <img src={anime.images.jpg.image_url} alt="" />
@@ -32,8 +43,10 @@ function AnimeCards() {
           <p>{anime.title}</p>
           <p>{anime.score}⭐</p>
           <p>{anime.episodes}🎞️</p>
-          <button>Watchlist ​🕛​​</button>
-          <button>Voir plus</button>
+          <div className="redirection">
+            <button type="button">En savoir plus</button>
+            <button type="button">Ajouter à la Watchlist ​🕛​​</button>
+          </div>
         </article>
       ))}
     </>
