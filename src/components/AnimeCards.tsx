@@ -42,7 +42,11 @@ function AnimeCards({ checked, search }) {
           </a>
           <p>{anime.title}</p>
           <p>{anime.score}⭐</p>
-          <p>🎞️{anime.episodes}</p>
+          <p>{anime.episodes}🎞️</p>
+          <div className="redirection">
+            <button type="button">En savoir plus</button>
+            <button type="button">Ajouter à la Watchlist ​🕛​​</button>
+          </div>
         </article>
       ))}
     </>
