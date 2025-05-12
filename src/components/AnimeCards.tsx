@@ -31,8 +31,10 @@ function AnimeCards({ checked, search }) {
     return true;
   });
 
-  const result = dataFiltered.filter((el) => el.title.includes(search));
-  console.info(result);
+  const result = dataFiltered.filter((el) =>
+    el.title.toLowerCase().includes(search.toLowerCase())
+  );
+  //  console.info(result);
   return (
     <>
       {result.map((anime) => (
