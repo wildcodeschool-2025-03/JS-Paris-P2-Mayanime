@@ -1,7 +1,7 @@
 import "./Watchlist.css";
+import { useEffect, useState } from "react";
 import dbz from "../assets/DBZ.jpg";
 import saintseiya from "../assets/Saint Seiya.png";
-import { useEffect, useState } from "react";
 
 function WatchAnime({ anime }) {
 	const [insideWatchlist, setInsideWatchlist] = useState(
@@ -52,13 +52,13 @@ function Watchlist() {
 	}, []);
 	return (
 		<>
+			{animeList.map((animeFromTheList) => (
+				<WatchAnime key={animeFromTheList.mal_id} anime={animeFromTheList} />
+			))}
 			<div className="bouton">
 				<button type="button">Watchlist</button>
 				<button type="button">Vus</button>
 			</div>
-			{animeList.map((animeFromTheList) => (
-				<WatchAnime key={animeFromTheList.mal_id} anime={animeFromTheList} />
-			))}
 		</>
 	);
 }
