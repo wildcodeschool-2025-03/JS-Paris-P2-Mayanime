@@ -1,24 +1,24 @@
 import "../pages/Catalogue.css";
 
 function FilterBar({ setChecked, setName }) {
-  const clickChange = (event) => {
-    setChecked(event.target.checked);
-    // console.log(setChecked);
+	const clickChange = (event) => {
+		setChecked(event.target.checked);
+		// console.log(setChecked);
 
-    setName(event.target.name);
-    // console.log(event.target.name);
-    // console.log(event.target.checked);
-  };
+		setName(event.target.name);
+		// console.log(event.target.name);
+		// console.log(event.target.checked);
+	};
 
-  return (
-    <>
-      {/* <div className="langues" /> */}
-      <h4>Status</h4>
-      <div className="status">
-        <input type="checkbox" name="Currently Airing" onClick={clickChange} />
-        <label htmlFor="Currently Airing">Currently Airing</label>
-      </div>
-      {/* <div>
+	return (
+		<>
+			{/* <div className="langues" /> */}
+			<h4>Status</h4>
+			<div className="status">
+				<input type="checkbox" name="Currently Airing" onClick={clickChange} />
+				<label htmlFor="Currently Airing">Currently Airing</label>
+			</div>
+			{/* <div>
         <input type="checkbox" name="Currently Airing" onClick={clickChange} />
         <label for="Currently Airing">Currently Airing</label>
       </div>
@@ -26,7 +26,7 @@ function FilterBar({ setChecked, setName }) {
         <input type="checkbox" name="Movie" onClick={clickChange} />
         <label for="Movie">Movie</label>
       </div> */}
-      {/* <h4>Âges</h4>
+			{/* <h4>Âges</h4>
       <input type="checkbox" name="Pour tous" onClick={clickChange} />
       <input type="checkbox" name="16" onClick={clickChange} />
       <input type="checkbox" name="12" onClick={clickChange} />
@@ -41,8 +41,8 @@ function FilterBar({ setChecked, setName }) {
       <input type="checkbox" name="romance" onClick={clickChange} />
       <h4>Popularité</h4>
       <input type="checkbox" name="Les mieux notés" onClick={clickChange} /> */}
-    </>
-  );
+		</>
+	);
 }
 
 export default FilterBar;

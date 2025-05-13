@@ -1,19 +1,19 @@
 function SearchBar({ search, setSearch }) {
-  const handleChange = (event) => {
-    console.info(event.target.value);
-    setSearch(event.target.value);
-  };
+	const handleChange = (event) => {
+		console.info(event.target.value);
+		setSearch(event.target.value);
+	};
 
-  return (
-    <>
-      <input
-        type="text"
-        placeholder="Votre recherche..."
-        onChange={handleChange}
-      />
-      <button type="button">🔍︎</button>
-    </>
-  );
+	return (
+		<>
+			<input
+				type="text"
+				placeholder="Votre recherche..."
+				onChange={handleChange}
+			/>
+			<button type="button">🔍︎</button>
+		</>
+	);
 }
 
 export default SearchBar;
