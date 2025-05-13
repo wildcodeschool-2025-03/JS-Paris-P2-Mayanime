@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../pages/Catalogue.css";
+import { useNavigate } from "react-router-dom";
 
 interface Anime {
 	mal_id: number;
@@ -15,6 +16,7 @@ interface Anime {
 
 function AnimeCards({ checked, search }) {
 	// console.log(checked, name);
+	const navigate = useNavigate();
 
 	const [data, setData] = useState<Anime[]>([]);
 
@@ -46,8 +48,12 @@ function AnimeCards({ checked, search }) {
 					<p>{anime.score}⭐</p>
 					<p>{anime.episodes}🎞️</p>
 					<div className="redirection">
-						<button type="button">En savoir plus</button>
-						<button type="button">Ajouter à la Watchlist ​🕛​​</button>
+						<button onClick={() => navigate("/Description")} type="button">
+							En savoir plus
+						</button>
+						<button onClick={() => navigate("/Watchlist")} type="button">
+							Ajouter à la Watchlist ​🕛​​
+						</button>
 					</div>
 				</article>
 			))}
