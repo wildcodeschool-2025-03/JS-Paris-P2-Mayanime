@@ -1,7 +1,9 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import AddWatchlistButton from "./AddWatchlistButton";
+import "../pages/Description";
 
 function AnimeCardPourLaWatchlist({ anime }) {
+	const Navigate = useNavigate();
 	return (
 		<>
 			<article key={anime.mal_id}>
@@ -12,7 +14,10 @@ function AnimeCardPourLaWatchlist({ anime }) {
 				<p>{anime.score}⭐</p>
 				<p>{anime.episodes}🎞️</p>
 				<div className="redirection">
-					<button onClick={() => Navigate("/Description")} type="button">
+					<button
+						type="button"
+						onClick={() => Navigate(`/Description/${anime.mal_id}`)}
+					>
 						En savoir plus
 					</button>
 					<AddWatchlistButton anime={anime} />
