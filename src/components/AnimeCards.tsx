@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../pages/Catalogue.css";
 import { useNavigate } from "react-router-dom";
 import AddWatchlistButton from "./AddWatchlistButton";
+import AnimeCardPourLaWatchlist from "./AnimeCardPourLaWatchlist";
 
 interface Anime {
 	mal_id: number;
@@ -41,20 +42,22 @@ function AnimeCards({ checked, search }) {
 	return (
 		<>
 			{result.map((anime) => (
-				<article key={anime.mal_id}>
-					<a href="/">
-						<img src={anime.images.jpg.image_url} alt="" />
-					</a>
-					<p>{anime.title}</p>
-					<p>{anime.score}⭐</p>
-					<p>{anime.episodes}🎞️</p>
-					<div className="redirection">
-						<button onClick={() => navigate("/Description")} type="button">
-							En savoir plus
-						</button>
-						<AddWatchlistButton anime={anime} />
-					</div>
-				</article>
+				// <article key={anime.mal_id}>
+				// 	<a href="/">
+				// 		<img src={anime.images.jpg.image_url} alt="" />
+				// 	</a>
+				// 	<p>{anime.title}</p>
+				// 	<p>{anime.score}⭐</p>
+				// 	<p>{anime.episodes}🎞️</p>
+				// 	<div className="redirection">
+				// 		<button onClick={() => navigate("/Description")} type="button">
+				// 			En savoir plus
+				// 		</button>
+				// 		<AddWatchlistButton anime={anime} />
+				// 	</div>
+				// </article>
+
+				<AnimeCardPourLaWatchlist key={anime.mal_id} anime={anime} />
 			))}
 		</>
 	);
