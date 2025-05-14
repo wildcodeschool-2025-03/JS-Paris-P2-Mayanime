@@ -1,7 +1,6 @@
 import "./Watchlist.css";
 import { useEffect, useState } from "react";
-import dbz from "../assets/DBZ.jpg";
-import saintseiya from "../assets/Saint Seiya.png";
+import { useContext } from "react";
 
 function WatchAnime({ anime }) {
 	const [insideWatchlist, setInsideWatchlist] = useState(
