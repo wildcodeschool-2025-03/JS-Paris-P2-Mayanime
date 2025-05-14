@@ -14,5 +14,5 @@ function SelectionWatchlistProvider({ children }) {
 	);
 }
 
-export default SelectionWatchlistProvider;
+export default selectionWatchlistContext;
 export { SelectionWatchlistProvider };
