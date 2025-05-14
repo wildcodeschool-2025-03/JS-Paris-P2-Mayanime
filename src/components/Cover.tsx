@@ -65,7 +65,7 @@ function Cover() {
 				<p>🎞️ {currentAnime.episodes} épisodes</p>
 				<p>{currentAnime.background}</p>
 				<button type="button">
-					<Link to={`/description/${currentAnime.mal_id}`}>En savoir plus</Link>
+					<Link to={`/Description/${currentAnime.mal_id}`}>En savoir plus</Link>
 				</button>
 			</div>
 			<a href="/">

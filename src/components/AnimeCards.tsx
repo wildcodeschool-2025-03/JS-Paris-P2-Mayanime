@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../pages/Catalogue.css";
 import { useNavigate } from "react-router-dom";
+import AddWatchlistButton from "./AddWatchlistButton";
 
 interface Anime {
 	mal_id: number;
@@ -51,9 +52,7 @@ function AnimeCards({ checked, search }) {
 						<button onClick={() => navigate("/Description")} type="button">
 							En savoir plus
 						</button>
-						<button onClick={() => navigate("/Watchlist")} type="button">
-							Ajouter à la Watchlist ​🕛​​
-						</button>
+						<AddWatchlistButton anime={anime} />
 					</div>
 				</article>
 			))}
