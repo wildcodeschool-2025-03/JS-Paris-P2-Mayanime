@@ -21,6 +21,22 @@ function Cover() {
 	const [data, setData] = useState<Anime[]>([]);
 	// State pour garder en mémoire l'indice de l'anime actuellement affiché
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const [secondsLeft, setSecondsLeft] = useState(30);
+
+	const Timer = () => {
+		// faire défiler les animés via un slide intervalle de 30secondes
+
+		// dès que les 30 secondes se sont écoulées, le slide passe à l'animé suivant
+		let time = 30;
+		const timer = setInterval(() => {
+			time -= 3;
+			setSecondsLeft((prev) => prev - 3);
+			setCurrentIndex((prevIndex) => prevIndex + 1);
+			if (time === 0) setCurrentIndex(0);
+		}, 3000);
+
+		// afin de revenir au premier animé à la fin de la boucle
+	};
 
 	// useEffect sans dépendances => s'exécute une seule fois au montage du composant
 	useEffect(() => {
@@ -36,6 +52,7 @@ function Cover() {
 				const top10 = sortedData.slice(0, 10);
 				// On met à jour le state avec ces 10 animés
 				setData(top10);
+				Timer();
 			});
 	}, []);
 
@@ -49,9 +66,9 @@ function Cover() {
 
 	// Rendu : on affiche les détails de l'anime courant
 	return (
-		<article className="Cover" key={currentAnime.mal_id}>
+		<article className="Cover" key={currentAnime?.mal_id}>
 			<div>
-				<h2>{currentAnime.title}</h2>
+				<h2>{currentAnime?.title}</h2>
 				{/*on a cré un bouton evenement onclik pour mettre l'animé suivant en parcourant les data; modulo = reste de la division*/}
 				<button
 					type="button"
@@ -61,21 +78,25 @@ function Cover() {
 				>
 					Suivant
 				</button>
-				<p>{currentAnime.score} ⭐</p>
-				<p>🎞️ {currentAnime.episodes} épisodes</p>
-				<p>{currentAnime.background}</p>
+				<p>{currentAnime?.score} ⭐</p>
+				<p>🎞️ {currentAnime?.episodes} épisodes</p>
+				<p>{currentAnime?.background}</p>
 				<button type="button">
-					<Link to={`/Description/${currentAnime.mal_id}`}>En savoir plus</Link>
+					<Link to={`/Description/${currentAnime?.mal_id}`}>
+						En savoir plus
+					</Link>
 				</button>
 			</div>
 			<a href="/">
 				<img
-					src={currentAnime.images.webp.large_image_url}
-					alt={currentAnime.title}
+					src={currentAnime?.images.webp.large_image_url}
+					alt={currentAnime?.title}
 				/>
 			</a>
 		</article>
 	);
 }
+
+// temps restant entre le slide des animés
 
 export default Cover;
