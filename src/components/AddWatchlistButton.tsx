@@ -17,13 +17,11 @@ function AddWatchlistButton({ anime }) {
 					: removeSelection(anime)
 			}
 		>
-				
 			{!isItSelected(anime)
 				? "Ajouter à la Watchlist ​🕛"
 				: "Supprimer de la Watchlist "}
 			​​
 		</button>
-				
 	);
 }
 export default AddWatchlistButton;
