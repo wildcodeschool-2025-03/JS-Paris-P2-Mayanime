@@ -1,5 +1,4 @@
 .Cover {
-	background-image: ;
 	margin-top: 100px;
 	display: flex;
 	justify-content: space-between;
@@ -16,7 +15,7 @@
 	cursor: pointer;
 	display: inline-block;
 	transform-origin: center;
-	font-style: none;
+	text-decoration: none;
 }
 
 .Cover button:hover {
@@ -24,6 +23,11 @@
 	box-shadow: 0 0 15px #000000;
 }
 
-.Cover>div>h2 {
+.Cover > div > h2 {
 	font-size: 7em;
+}
+
+.Cover>div>button>a {
+	text-decoration: none;
+
 }

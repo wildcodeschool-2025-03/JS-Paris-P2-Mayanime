@@ -1,8 +1,6 @@
 import "./Watchlist.css";
-import { useEffect, useState } from "react";
 import { useContext } from "react";
-import AddWatchlistButton from "../components/AddWatchlistButton";
-import AnimeCards from "../components/AnimeCards";
+import AnimeCardPourLaWatchlist from "../components/AnimeCardPourLaWatchlist";
 import selectionWatchlistContext from "../context/selectionWatchlist";
 // function WatchAnime({ anime }) {
 // 	const [insideWatchlist, setInsideWatchlist] = useState(
@@ -71,7 +69,7 @@ function Watchlist() {
 	return (
 		<div className="bouton">
 			{selectionWatchlist.map((anime) => (
-				<AnimeCard key={anime.mal_id} anime={anime} />
+				<AnimeCardPourLaWatchlist key={anime.mal_id} anime={anime} />
 			))}
 		</div>
 	);
