@@ -1,4 +1,12 @@
+.all 
+
+{
+	margin-top: 50px;
+}
+
+
 /* Section image avec dégradé */
+
 .description-page {
 	position: relative;
 }
@@ -64,7 +72,7 @@ button:hover {
 	flex-wrap: wrap;
 }
 
-.hero-gradient {
+/* .hero-gradient {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -78,7 +86,7 @@ button:hover {
 		rgba(0, 0, 0, 0.3) 70%,
 		rgba(0, 0, 0, 0) 100%
 	);
-}
+} */
 
 /* Logo One Piece en bas à gauche de l'image */
 .onepiece-logo {
@@ -241,4 +249,8 @@ button:hover {
 	color: white;
 	cursor: pointer;
 	z-index: 1001;
+}
+
+.description-block {
+	border-radius: 40px;
 }

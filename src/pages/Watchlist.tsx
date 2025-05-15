@@ -71,7 +71,7 @@ function Watchlist() {
 	return (
 		<div className="bouton">
 			{selectionWatchlist.map((anime) => (
-				<AnimeCards key={anime.mal_id} anime={anime} />
+				<AnimeCard key={anime.mal_id} anime={anime} />
 			))}
 		</div>
 	);

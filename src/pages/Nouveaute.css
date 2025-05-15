@@ -1,7 +1,29 @@
 .Cover {
+	background-image: ;
+	margin-top: 100px;
 	display: flex;
-	flex-direction: row;
+	justify-content: space-between;
 }
-.Cover div {
-	text-align: start;
+
+.Cover button {
+	background-color: #6c3483;
+	color: #d9d9d9;
+	font-size: 1rem;
+	text-align: center;
+	padding: 0.7rem 2rem;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	display: inline-block;
+	transform-origin: center;
+	font-style: none;
+}
+
+.Cover button:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 15px #000000;
+}
+
+.Cover>div>h2 {
+	font-size: 7em;
 }
