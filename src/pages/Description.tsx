@@ -42,19 +42,19 @@ function Description() {
 		<>
 			{description && (
 				<section className="all">
-					<div className="close-button">✕</div>
+					{/* <div className="close-button">✕</div> */}
 
-					<section className="hero">
+					{/* <section className="hero">
 						<img
 							src={description.images.webp.large_image_url}
 							alt={description.title}
 						/>
 						<div className="hero-gradient" />
-					</section>
+					</section> */}
 
 					<section className="description-block">
 						<div className="description-top">
-							<p>▶ Bande-annonce</p>
+							{/* <p>▶ Bande-annonce</p> */}
 							{description.trailer.embed_url == null ? (
 								<p>indisponible :/</p>
 							) : (
