@@ -6,13 +6,13 @@ function SelectionWatchlistProvider({ children }) {
 	const [selectionWatchlist, setSelectionWatchlist] = useState([]);
 
 	const isItSelected = (anime) => {
-		const exist = selectionWatchlist.find((select) => select.id === anime.id);
+		const exist = selectionWatchlist.find((select) => select.mal_id === anime.mal_id);
 		if (exist) return true;
 		return false;
 	};
 	const removeSelection = (anime) => {
 		const selects = selectionWatchlist.filter(
-			(select) => select.id !== anime.id,
+			(select) => select.mal_id !== anime.mal_id
 		);
 		setSelectionWatchlist(selects);
 	};
