@@ -24,10 +24,10 @@ function Cover() {
 
 	// Fonction de timer automatique
 	const startTimer = useCallback(() => {
-		let time = 30;
+		let time = 50;
 		const intervalId = setInterval(() => {
-			time -= 3;
-			setSecondsLeft((prev) => prev - 3);
+			time -= 5;
+			setSecondsLeft((prev) => prev - 5);
 
 			setCurrentIndex((prevIndex) => {
 				const nextIndex = prevIndex + 1;
@@ -35,9 +35,9 @@ function Cover() {
 			});
 
 			if (time <= 0) {
-				time = 30;
+				time = 50;
 			}
-		}, 3000);
+		}, 5000);
 
 		return () => clearInterval(intervalId);
 	}, []);
@@ -68,14 +68,6 @@ function Cover() {
 		<article className="Cover" key={currentAnime?.mal_id}>
 			<div>
 				<h2>{currentAnime?.title}</h2>
-				<button
-					type="button"
-					onClick={() =>
-						setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length)
-					}
-				>
-					Suivant
-				</button>
 				<p>{currentAnime?.score} ⭐</p>
 				<p>🎞️ {currentAnime?.episodes} épisodes</p>
 				<p>{currentAnime?.background}</p>
