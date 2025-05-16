@@ -116,36 +116,35 @@ function Description() {
 					</div>
 				</div>
 
-						<div className="description-content">
-							<div className="left">
-								<p>{description.synopsis}</p>
-							</div>
-							<div className="right">
-								<p>
-									<strong style={{ color: "#733597" }}>Distribution:</strong>{" "}
-									Mayumi Tanaka, Kazuya Nakai, Akemi Okamura, Kappei
-									Yamaguchi...
-								</p>
-								<p>
-									<strong style={{ color: "#733597" }}>Genre:</strong> Action,
-									Aventure, Fantastique, Comédie
-								</p>
-								<p>
-									<strong style={{ color: "#733597" }}>Thèmes:</strong>{" "}
-									Piraterie, Liberté, Amitié, Héritage, Justice...
-								</p>
-							</div>
-						</div>
+				<div className="description-content">
+					<div className="left">
+						<p>{description.synopsis}</p>
+					</div>
+					<div className="right">
+						<p>
+							<strong style={{ color: "#733597" }}>Distribution:</strong> Mayumi
+							Tanaka, Kazuya Nakai, Akemi Okamura, Kappei Yamaguchi...
+						</p>
+						<p>
+							<strong style={{ color: "#733597" }}>Genre:</strong> Action,
+							Aventure, Fantastique, Comédie
+						</p>
+						<p>
+							<strong style={{ color: "#733597" }}>Thèmes:</strong> Piraterie,
+							Liberté, Amitié, Héritage, Justice...
+						</p>
+					</div>
+				</div>
 
-						<button
-							onClick={() => navigate("/Commentaire")}
-							className="btn-avis"
-							type="button"
-						>
-							💬 Avis <span className="badge">27</span>
-						</button>
-					</section>
-				</section>
+				<button
+					onClick={() => navigate("/Commentaire")}
+					className="btn-avis"
+					type="button"
+				>
+					💬 Avis <span className="badge">27</span>
+				</button>
+			</section>
+		</section>
 	);
 }
 export default Description;
