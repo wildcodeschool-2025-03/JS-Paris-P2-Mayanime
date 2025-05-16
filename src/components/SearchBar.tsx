@@ -11,7 +11,6 @@ function SearchBar({ search, setSearch }) {
 				placeholder="Votre recherche..."
 				onChange={handleChange}
 			/>
-			<button type="button">🔍︎</button>
 		</>
 	);
 }
