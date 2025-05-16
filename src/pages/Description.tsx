@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Description.css";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface Anime {
 	anime: {
@@ -26,6 +27,8 @@ interface Anime {
 function Description() {
 	const { mal_id } = useParams();
 	const [description, setDescription] = useState<Anime | null>(null);
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const getDescription = async () => {
@@ -110,7 +113,11 @@ function Description() {
 							</div>
 						</div>
 
-						<button className="btn-avis" type="button">
+						<button
+							onClick={() => navigate("/Commentaire")}
+							className="btn-avis"
+							type="button"
+						>
 							💬 Avis <span className="badge">27</span>
 						</button>
 					</section>

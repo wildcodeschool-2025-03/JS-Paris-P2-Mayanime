@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Catalogue from "./Catalogue";
+import Commentaire from "./Commentaire";
 import Description from "./Description";
 import Nouveaute from "./Nouveaute";
 import Profile from "./Profile";
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
 				path: "/Profile",
 				element: <Profile />,
 			},
+			{ path: "/Commentaire", element: <Commentaire /> },
 		],
 	},
 ]);
