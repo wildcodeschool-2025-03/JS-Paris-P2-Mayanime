@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Description.css";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AddWatchlistButton from "../components/AddWatchlistButton";
 
 // Interfaces
@@ -39,6 +40,8 @@ interface Anime {
 function Description() {
 	const { mal_id } = useParams();
 	const [description, setDescription] = useState<Anime | null>(null);
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const getDescription = async () => {
@@ -113,12 +116,36 @@ function Description() {
 					</div>
 				</div>
 
-				<button className="btn-avis" type="button">
-					💬 Avis <span className="badge">27</span>
-				</button>
-			</section>
-		</section>
+						<div className="description-content">
+							<div className="left">
+								<p>{description.synopsis}</p>
+							</div>
+							<div className="right">
+								<p>
+									<strong style={{ color: "#733597" }}>Distribution:</strong>{" "}
+									Mayumi Tanaka, Kazuya Nakai, Akemi Okamura, Kappei
+									Yamaguchi...
+								</p>
+								<p>
+									<strong style={{ color: "#733597" }}>Genre:</strong> Action,
+									Aventure, Fantastique, Comédie
+								</p>
+								<p>
+									<strong style={{ color: "#733597" }}>Thèmes:</strong>{" "}
+									Piraterie, Liberté, Amitié, Héritage, Justice...
+								</p>
+							</div>
+						</div>
+
+						<button
+							onClick={() => navigate("/Commentaire")}
+							className="btn-avis"
+							type="button"
+						>
+							💬 Avis <span className="badge">27</span>
+						</button>
+					</section>
+				</section>
 	);
 }
-
 export default Description;
