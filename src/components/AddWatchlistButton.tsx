@@ -8,6 +8,7 @@ function AddWatchlistButton({ anime }) {
 		isItSelected,
 		removeSelection,
 	} = useContext(selectionWatchlistContext);
+
 	return (
 		<button
 			type="button"
